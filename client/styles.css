@@ -1,0 +1,11 @@
+body{
+    background-image: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+::placeholder {
+    color: darkgrey;
+    /* opacity: 1; Firefox */
+}
+/* // Chrome, Firefox, Opera, Safari 10.1 */

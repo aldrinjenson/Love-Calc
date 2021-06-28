@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <link rel="stylesheet" href="./materialize_min.css" />
+	 <link rel="stylesheet" href="./styles.css">
+    <title>Love Calculator</title>
+
+    <style>
+      body{
+    background-image: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .main{
+    margin-bottom: 50px;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darkslategrey;
+    /* opacity: 1; Firefox */
+  }
+  </style>
+  </head>
+  
+  <body>
+    <header>
+      <nav class="nav-wrapper transparent lighten-2">
+        <div class="container">
+          <span class="brand-logo center">Love Calculator</span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section main container">
+      <div class="card-panel red lighten-5">
+        <h3>Love Meter • Find compatibility</h3>
+        <p>
+          Do you share a special connection with someone? Is he or she your
+          special person? This Love meter will help you find out. This is a simple
+          Love Calculator which displays love percentage based on names. Enter
+          your name and the name of your partner/lover/crush to find Love
+          compatibility & chances of successful love relationship.
+        </p>
+      </div>
+
+      <div class="card-panel red lighten-4">
+        <form action="" id="dataForm" >
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="person1">
+                <div class="input-field">
+                  <input required placeholder="Enter Your First Name" type="text" id="personName" />
+                </div>
+                <div class="input-field">
+						 <select name="gender" id="personGender">
+							 <option value="Male">Male</option>
+							 <option value="Female">Female</option>
+							</select>
+						<label for="gender">Gender</label>
+                </div>
+              </div>
+				</div>  
+            <div class="col s12 m6">
+              <div class="person1">
+                <div class="input-field">
+                  <input required placeholder="Enter First Name of your crush" type="text" id="crushName" />
+                </div>
+                <div class="input-field">
+						 <select name="gender" id="crushGender">
+							 <option value="Male">Male</option>
+							 <option value="Female">Female</option>
+							</select>
+						<label for="gender">Gender</label>
+                </div>
+              </div>
+				</div>  
+			 </div><!-- row -->
+			 <div class="row">
+				 <div class="col s12 m6">
+					 <div class="input-field">
+						 <input required placeholder="Age Difference between you and your crush"type="number" name="ageDiff" min="0" id="ageDiff">
+					 </div>
+				 </div>
+				 <div class="col s12 m6">
+					 <div class="input-field">
+						 <input required placeholder="Years of knowing each other" type="number" name="yearDiff" min="0" id="yearDiff">
+					 </div>
+				 </div>
+			 </div>
+			 <div class="input-field center">
+				 <button type="submit" class="btn red lighten-1">Calculate</button>
+			 </div>
+        </form>
+      </div> <!-- Card -->
+    </section>
+
+      <div class="calculating container center" style="display: none;" >
+        <div class="card-panel container valign-wrapper red lighten-3" style="height: 95vh;">
+          <h4 class="center-align">Calculating....</h4>
+        </div>
+      </div>
+      
+      <div class="card-panel center final" style="display: none;" >
+        <div class="row">
+          <div class="col s6">
+            <img src="./psych.gif" class="responsive-img" alt="">
+          </div>
+          <div class="col s6">
+            <img src="./haha.gif" class="responsive-img"  alt="Siiik!!">
+            <img src="./smooth.gif" class="responsive-img"  alt="Siiik!!">
+          </div>
+          <div class="col s12">
+            <img src="./giphy.gif" class="responsive-img" alt="Happy April Fools!!">
+          </div>
+        </div>
+        <div class="footer">
+          <p class="">YOU'VE BEEN PRANKED !! Your name and your crush's name has been sent to al****on@gmail.com. Cheers!!</p>
+          <hr>
+          <!-- <iframe class="responsive-img" src="https://www.youtube.com/embed/vxwCUP9jo8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vxwCUP9jo8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Feeling Bored? Have some fun with Mr.Been</p>
+          <p>Don't be grumpy in this quarantine..Make the best out of it. *Cheeky face*</p>
+        </div>
+      </div>
+
+    <script src="./script.js"></script>
+    <script src="./materialize_min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var elems = document.querySelectorAll("select");
+        M.FormSelect.init(elems);
+      });
+	 </script>
+  </body>
+</html>
